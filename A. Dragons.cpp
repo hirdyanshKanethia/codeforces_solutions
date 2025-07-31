@@ -20,9 +20,10 @@ int main() {
     cin >> arr[i].first >> arr[i].second;
   }
 
-  sort(arr.begin(), arr.end(), [] (const pair<int, int> &a, const pair<int, int> &b) {
-    return a.first < b.first;
-  });
+  sort(arr.begin(), arr.end(),
+       [](const pair<int, int> &a, const pair<int, int> &b) {
+         return a.first < b.first;
+       });
 
   for (int i = 0; i < n; ++i) {
     if (arr[i].first >= s) {
